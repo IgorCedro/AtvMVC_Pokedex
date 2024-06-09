@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedex</title>
+</head>
+<body>
+    <h1>Pokedex</h1>
+    <hr>
+    <table>
+        <thead>
+        <tr>
+            <th>Número da Pokedex</th>
+            <th>Nome</th>
+            <th>Tipo 1</th>
+            <th>Tipo 2</th>
+            <th>Altura em metros</th>
+            <th>Peso em quilogramas</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pokemon: ${pokedex}">
+            <td th:text="${pokemon.numero}">Número da Pokedex</td>
+            <td th:text="${pokemon.nome}">Nome</td>
+            <td th:text="${pokemon.tipo1}">Tipo 1</td>
+            <td th:text="${pokemon.tipo2}">Tipo 2</td>
+            <td th:text="${pokemon.altura}">Altura</td>
+            <td th:text="${pokemon.peso}">Peso</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
